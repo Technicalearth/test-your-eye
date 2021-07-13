@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Click me level 5</title>
+</head>
+<body>
+    <a class="nav-link disabled" id="cli" href="#" tabindex="-1" aria-disabled="true">Click - FINISH</a>
+    <a class="nav-link disabled" id="re" href="index.html" tabindex="-1" aria-disabled="true">Click - REPLAY</a>
+    <a class="nav-link disabled" id="ex" href="https://www.google.co.in" tabindex="-1" aria-disabled="true">Click - EXIT</a>
+    <u><b><i><h1 style="text-align:center; ">Hard</h1></i></b></u>
+    <p style="text-align:center;">Find The Word "YES"</p>
+    <p id="yes">YES</p>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $("#yes").click(function(){
+        $("#yes").html("<b><i><u>YES</u></i></b>")
+        $("#yes").css("color", "black");
+        $("#cli").removeClass("disabled")
+        $("#cli").removeAttr("aria-disabled")
+        $("#cli").removeAttr("tabindex")
+    })
+    $("#cli").click(function(){
+        var a = prompt("You Win! 😃 type \"replay\" for replay and \"exit\" for exit")
+        var b = document.getElementById("re")
+        var c = document.getElementById("ex")
+
+        if (a=="replay"){
+            $("#re").removeClass("disabled")
+            $("#re").removeAttr("aria-disabled")
+            $("#re").removeAttr("tabindex")
+            b.click()
+        }
+        else if (a=="exit"){
+            $("#ex").removeClass("disabled")
+            $("#ex").removeAttr("aria-disabled")
+            $("#ex").removeAttr("tabindex")
+            c.click()
+        }
+    })
+</script>
+</html>
