@@ -13,7 +13,6 @@
     <a class="nav-link disabled" id="re" href="index.html" tabindex="-1" aria-disabled="true">Click - REPLAY</a>
     <a class="nav-link disabled" id="ex" href="https://www.google.co.in" tabindex="-1" aria-disabled="true">Click - EXIT</a>
     <a class="nav-link disabled" id="doa" href="Test_your_eye.apk" tabindex="-1" aria-disabled="true" download>Click - DOWNLOAD ANDROID</a>
-    <a class="nav-link disabled" id="dow" href="Test Your Eye-1.1-amd64.msi" tabindex="-1" aria-disabled="true" download>Click - DOWNLOAD WINDOWS</a>
     <u><b><i><h1 style="text-align:center; ">Hard</h1></i></b></u>
     <p style="text-align:center;">Find The Word "YES"</p>
     <p id="yes">YES</p>
@@ -33,7 +32,6 @@
         var b = document.getElementById("re")
         var c = document.getElementById("ex")
         var d = document.getElementById("doa")
-        var e = document.getElementById("dow")
 
         if (a=="replay"){
             $("#re").removeClass("disabled")
@@ -51,11 +49,6 @@
             $("#doa").removeClass("disabled")
             d.click()
             $("#doa").addClass("disabled")
-        }
-        else if (a=="download-w"){
-            $("#dow").removeClass("disabled")
-            e.click()
-            $("#dow").addClass("disabled")
         }
     })
 </script>
